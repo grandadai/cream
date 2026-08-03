@@ -148,7 +148,7 @@ export default function App() {
             </div>
           </div>
           <div className="hero-product">
-            <CreamJar className="hero-jar" />
+            <CreamJar className="hero-jar" variant="photo" />
           </div>
         </div>
       </section>
@@ -238,7 +238,7 @@ export default function App() {
           {products.map((product) => (
             <article className="product reveal" key={product.id}>
               <div className="product-visual">
-                <CreamJar />
+                <CreamJar variant="photo" />
               </div>
               <div className="product-copy">
                 <div className="product-meta">

@@ -1,8 +1,24 @@
 type CreamJarProps = {
   className?: string
+  /** Photoreal product still for hero/shop; CSS jar used for scroll ritual */
+  variant?: 'css' | 'photo'
 }
 
-export function CreamJar({ className = '' }: CreamJarProps) {
+export function CreamJar({ className = '', variant = 'css' }: CreamJarProps) {
+  if (variant === 'photo') {
+    return (
+      <div className={`cream-photo ${className}`} aria-hidden="true">
+        <img
+          src="/orris-cream-jar.png"
+          alt=""
+          width={640}
+          height={640}
+          decoding="async"
+        />
+      </div>
+    )
+  }
+
   return (
     <div className={`cream-jar ${className}`} aria-hidden="true">
       <div className="jar-bokeh">

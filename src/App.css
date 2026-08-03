@@ -208,19 +208,22 @@
 }
 
 .hero-jar {
-  filter: drop-shadow(var(--shadow));
-  transform: scale(1.05);
+  width: min(420px, 88vw);
+  filter: drop-shadow(0 24px 50px rgba(70, 120, 150, 0.22));
 }
 
-.hero-jar .jar-lid {
-  opacity: 0;
-  pointer-events: none;
-  transform: translateX(-50%) translateY(-90px);
+.cream-photo {
+  width: min(420px, 88vw);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
 }
 
-.hero-jar .jar-droplets,
-.hero-jar .jar-pearls {
-  opacity: 1;
+.cream-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 @media (min-width: 900px) {
@@ -239,7 +242,7 @@
   }
 
   .hero-jar {
-    transform: scale(1.28);
+    width: min(480px, 42vw);
   }
 }
 
@@ -534,6 +537,10 @@
 .p3 { width: 22px; height: 22px; right: 20%; bottom: 20%; }
 .p4 { width: 10px; height: 10px; right: 32%; bottom: 16%; }
 .p5 { width: 14px; height: 14px; left: 42%; bottom: 14%; }
+
+.product-visual .cream-photo {
+  width: min(220px, 70%);
+}
 
 .product-visual .cream-jar {
   width: 200px;
