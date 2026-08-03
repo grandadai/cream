@@ -54,18 +54,29 @@ export default function App() {
         .to('.ritual-copy .step-2', { opacity: 1, y: 0, duration: 0.4 }, 0.15)
         .to(
           '.ritual .jar-lid',
-          { y: -120, rotate: -8, duration: 0.8, ease: 'none' },
+          { y: -130, rotate: -10, opacity: 0.35, duration: 0.8, ease: 'none' },
           0,
         )
         .to(
-          '.ritual .cream-fill',
-          { scale: 1.08, y: -8, duration: 0.6, ease: 'none' },
-          0.2,
+          '.ritual .cream-mound',
+          { scale: 1.12, y: -14, duration: 0.65, ease: 'none' },
+          0.15,
         )
         .to(
-          '.ritual .cream-swirl',
-          { opacity: 1, scale: 1, duration: 0.5, ease: 'none' },
-          0.35,
+          '.ritual .cream-ridge',
+          {
+            opacity: 1,
+            scale: 1,
+            stagger: 0.06,
+            duration: 0.45,
+            ease: 'none',
+          },
+          0.3,
+        )
+        .to(
+          '.ritual .jar-droplets, .ritual .jar-pearls',
+          { opacity: 1, duration: 0.5, ease: 'none' },
+          0.4,
         )
         .to('.ritual-copy .step-2', { opacity: 0, y: -24, duration: 0.35 }, 0.55)
         .to('.ritual-copy .step-3', { opacity: 1, y: 0, duration: 0.4 }, 0.65)
