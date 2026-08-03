@@ -1,0 +1,84 @@
+:root {
+  --ink: #1c2b24;
+  --ink-soft: #3a4d43;
+  --mist: #e7eeea;
+  --foam: #f3f7f4;
+  --sage: #6b8f7a;
+  --sage-deep: #4f7260;
+  --bloom: #c9897a;
+  --brass: #9a8660;
+  --glass: rgba(255, 255, 255, 0.42);
+  --line: rgba(28, 43, 36, 0.12);
+  --shadow: 0 28px 60px rgba(28, 43, 36, 0.14);
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Sora', sans-serif;
+  color: var(--ink);
+  background: var(--foam);
+  font-family: var(--font-body);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--foam);
+  color: var(--ink);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 10% 0%, rgba(107, 143, 122, 0.22), transparent 55%),
+    radial-gradient(ellipse 60% 45% at 90% 15%, rgba(201, 137, 122, 0.16), transparent 50%),
+    radial-gradient(ellipse 70% 55% at 50% 100%, rgba(154, 134, 96, 0.12), transparent 55%),
+    linear-gradient(180deg, #eef4f0 0%, #f3f7f4 40%, #e8efe9 100%);
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: rgba(107, 143, 122, 0.28);
+}
