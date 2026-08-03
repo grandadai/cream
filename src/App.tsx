@@ -27,14 +27,17 @@ export default function App() {
         delay: 0.25,
         ease: 'power3.out',
       })
-      gsap.from('.hero-jar', {
-        y: 60,
-        scale: 0.92,
-        opacity: 0,
-        duration: 1.2,
-        delay: 0.15,
-        ease: 'power3.out',
-      })
+      gsap.fromTo(
+        '.hero-product',
+        { autoAlpha: 0, y: 36 },
+        {
+          autoAlpha: 1,
+          y: 0,
+          duration: 1.15,
+          delay: 0.2,
+          ease: 'power3.out',
+        },
+      )
 
       const ritual = gsap.timeline({
         scrollTrigger: {
@@ -113,25 +116,29 @@ export default function App() {
       <Nav />
 
       <section className="hero">
-        <div className="hero-copy">
-          <p className="hero-brand">ORRIS</p>
-          <h1 className="hero-line">Creams that open into ritual.</h1>
-          <p className="hero-support">
-            Scroll the jar open. Meet what melts in. Feel the finish before you
-            buy.
-          </p>
-          <div className="hero-actions">
-            <a className="btn primary" href="#ritual">
-              Begin the ritual
-            </a>
-            <a className="btn ghost" href="#shop">
-              Shop the house
-            </a>
-          </div>
-        </div>
-        <div className="hero-visual">
+        <div className="hero-visual" aria-hidden="true">
           <div className="hero-plane" />
-          <CreamJar className="hero-jar" />
+        </div>
+        <div className="hero-layout">
+          <div className="hero-copy">
+            <p className="hero-brand">ORRIS</p>
+            <h1 className="hero-line">Creams that open into ritual.</h1>
+            <p className="hero-support">
+              Scroll the jar open. Meet what melts in. Feel the finish before
+              you buy.
+            </p>
+            <div className="hero-actions">
+              <a className="btn primary" href="#ritual">
+                Begin the ritual
+              </a>
+              <a className="btn ghost" href="#shop">
+                Shop the house
+              </a>
+            </div>
+          </div>
+          <div className="hero-product">
+            <CreamJar className="hero-jar" />
+          </div>
         </div>
       </section>
 
